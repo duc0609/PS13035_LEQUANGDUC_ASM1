@@ -1,0 +1,22 @@
+﻿@model PS13035_LEQUANGDUC_ASM1.Models.ViewModels.ViewWebLogin
+@{
+    Layout = "~/Views/Shared/_WebLayout.cshtml";
+}
+<h1 class="text-center">Đăng Nhập - Người Dùng</h1>
+<div class="text-center " asp-validation-summary="All"></div>
+<div class="row text-danger ">
+    <div class="col-md-4">
+        <form asp-action="Login"  class="col-sm-auto">
+            <input type="hidden"  asp-for="ReturnUrl" />
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password"  type ="password" class="form-control" />
+            </div>
+            <button class="btn btn-primary" type="submit">Đăng Nhập</button>
+        </form>
+    </div>
+</div>
